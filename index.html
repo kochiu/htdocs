@@ -1,5 +1,6 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 
 <!-- Head -->
 <head>
@@ -9,7 +10,7 @@
 	<!-- Meta-Tags -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta name="keywords" content="">
+	<meta name="keywords" content="kochiu">
 	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<!-- //Meta-Tags -->
 
@@ -47,7 +48,7 @@
 					<a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span><span>爱琳</span></a>
 					<a href="about.html"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span><span>关于我们</span></a>
 					<a href="products.html"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span><span>样例</span></a>
-					<a href="codes.html"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span><span>其他</span></a>
+					<!-- <a href="codes.html"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span><span>其他</span></a> -->
 					<a href="contact.html"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span><span>联系我们</span></a>
 				</div>
 			</nav>
@@ -86,7 +87,7 @@
 
 					<h1>ENGINEER</h1>
 					<P id="Hotnews">欢迎来到我的博客，这是一个私人博客~  与大家共同分享我们的快乐！</P>
-					<a class="browse" href="products.html">BROWSE</a>
+					<a class="browse" href="products.html">start</a>
 
 				</div>
 				<!-- //Banner -->
@@ -95,9 +96,9 @@
 				<div class="index-about">
 
 					<div class="col-md-6 col-sm-6 index-about-grid index-about-info">
-						<h1>ABOUT US</h1>
+						<h1>关于我俩</h1>
 						<P>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation lamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
-						<a href="about.html">READ MORE</a>
+						<a href="about.html">更多>></a>
 					</div>
 
 					<div class="col-md-6 col-sm-6 index-about-grid index-about-image">
@@ -663,57 +664,8 @@
 	<!-- //Necessary-JavaScript-Files-&-Links -->
 
 
-	<!--  banner上的敲字效果 -->
-	<script language="javascript">
-		var NewsTime = 2000;    //每条信息完整出现后停留时间
-		var TextTime = 200;    //每条信息中的字出现的间隔时间
-
-		var newsi = 0;
-		var txti = 0;
-		var txttimer;   //调用setInterval的返回值，用于取消对函数的周期性执行
-		var newstimer;
-
-		var newstitle = new Array();    //以数组形式保存每个信息的标题
-		var newshref = new Array();   //以数组形式保存信息标题的链接
-
-		newstitle[0] = "欢迎来到我的博客，这是一个私人博客~  与大家共同分享我们的快乐！";   //显示在网页上的文字内容和对应的链接
-		newshref[0] = "http://www.kochiu.cn/";
-
-		newstitle[1] = "http://www.kochiu.cn/";
-		newshref[1] = "http://www.kochiu.cn/";
-
-		newstitle[2] = "爱琳欢迎你~";
-		newshref[2] = "http://www.kochiu.cn/";
-
-		//newstitle[3] = "ByeBye~~";
-		//newshref[3] = "http://www.kochiu.cn/";
-
-		function shownew(){
-			hwnewstr=newstitle[newsi];    //通过newsi传递，依次显示数组中的内容
-			newslink=newshref[newsi];     //依次显示文字对应的链接
-			 
-			if(txti>=hwnewstr.length){
-				clearInterval(txttimer);  //一旦超过要显示的文字长度，清除对shownew()的周期性调用
-				clearInterval(newstimer); 
-				newsi++;   //显示数组中的下一个
-
-				if(newsi>=newstitle.length){
-				newsi = 0;  //当newsi大于信息标题的数量时，把newsi清零，重新从第一个显示
-				}
-				newstimer = setInterval("shownew()",NewsTime);   //间隔2000ms后重新调用shownew()
-				txti = 0;  
-				return;
-			}
-			clearInterval(txttimer);  
-			document.getElementById("Hotnews").href = newslink;  
-			document.getElementById("Hotnews").innerHTML = hwnewstr.substring(0,txti+1);   //截取字符，从第一个字符到txti+1个字符
-
-			txti++;  //文字一个个出现
-			txttimer = setInterval("shownew()",TextTime);   
-		}
-		shownew();
-
-	</script>
+	
+	<!-- Supportive-JavaScript-File --> <script type="text/javascript" src="js/product.js"></script>
 
 </body>
 <!-- //Body -->
